@@ -10,6 +10,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
   installPrompt = event;
 
   butInstall.style.display = 'block';
+  console.log('Before Install Prompt:', installPrompt);
 });
 
 // TODO: Implement a click event handler on the `butInstall` element
@@ -18,6 +19,7 @@ butInstall.addEventListener('click', async () => {
     installPrompt.prompt();
 
     const choice = await installPrompt.choice;
+    console.log('Choice:', choice);
 
     if (choice.outcome === 'accepted') {
       console.log('Begining install...');
@@ -34,4 +36,5 @@ butInstall.addEventListener('click', async () => {
 // TODO: Add an handler for the `appinstalled` event
 window.addEventListener('appinstalled', (event) => {
   console.log('App installed successfully');
+  butInstall.style.display = 'none';
 });
