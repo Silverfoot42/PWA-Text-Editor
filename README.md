@@ -10,3 +10,4 @@ An application for a text editor that can run in the browser as well as be insta
 
 ## Deployment Link
 
+https://silverfoot42-pwa-text-editor-f069733964c4.herokuapp.com/
